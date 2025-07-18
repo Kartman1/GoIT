@@ -1,7 +1,6 @@
-package Java_core9;
+package Java_core9.collections.myArrayList;
 
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.StringJoiner;
 
 public class MyArrayList<T> {

@@ -1,4 +1,4 @@
-package Java_core9;
+package Java_core9.collections.myArrayList;
 
 public class MyArrayListTests {
     public static void main(String[] args) {
