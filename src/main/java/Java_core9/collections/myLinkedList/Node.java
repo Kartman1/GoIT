@@ -3,6 +3,7 @@ package Java_core9.collections.myLinkedList;
 public class Node <T>{
     private T value;
     private Node<T> next;
+    private Node<T> previous;
 
     public T getValue() {
         return value;
@@ -18,5 +19,13 @@ public class Node <T>{
 
     public void setNext(Node<T> next) {
         this.next = next;
+    }
+
+    public Node<T> getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(Node<T> previous) {
+        this.previous = previous;
     }
 }

@@ -13,20 +13,27 @@ public class MyLinkedListTests {
         System.out.println("list.size() = " + list.size());
         list.add("dasha");
         System.out.println("list.size() = " + list.size());
+        list.add("Yana");
+        list.add("Ivan");
 
         System.out.println("list.get(0) = " + list.get(0));
         System.out.println("list.get(1) = " + list.get(1));
 //        System.out.println("list.get(2) = " + list.get(2));
 
-        List<String> list1 = new LinkedList<>();
-        list1.add("Dima");
-        list1.add("Dasha");
-        list1.add("Sasha");
+        System.out.println("list.get(2) = " + list.get(2));
+        System.out.println("list.get(3) = " + list.get(3));
 
-        System.out.println("list1 = " + list1);
-        System.out.println("list1.size() = " + list1.size());
-        //        list1.remove(4);
-        System.out.println("list1 = " + list1);
-        System.out.println("list1.size() = " + list1.size());
+
+//        List<String> list1 = new LinkedList<>();
+//        list1.add("Dima");
+//        list1.add("Dasha");
+//        list1.add("Sasha");
+//
+//        System.out.println("list1 = " + list1);
+//        System.out.println("list1.size() = " + list1.size());
+//        //        list1.remove(4);
+//        System.out.println("list1 = " + list1);
+//        System.out.println("list1.size() = " + list1.size());
+
     }
 }

@@ -2,6 +2,7 @@ package Java_core9.collections.myLinkedList;
 
 public class MyLinkedList<T> {
     private Node<T> head;
+    private Node<T> tail;
 
 //-------------- add -------------------------
     public void add(T item){
@@ -12,10 +13,11 @@ public class MyLinkedList<T> {
         }else {
             Node<T> last = head;
             while (last.getNext() != null){
-                head.setNext(node);
+               last = last.getNext();
             }
 
             last.setNext(node);
+            node.setPrevious(last);
         }
     }
 //--------------------------------------------
