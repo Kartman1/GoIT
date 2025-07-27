@@ -11,9 +11,9 @@ public class MyLinkedList<T> {
         if (head == null){
             head = node;
         }else {
-            Node<T> last = head;
-            while (last.getNext() != null){
-               last = last.getNext();
+                Node<T> last = head;
+                while (last.getNext() != null){
+                last = last.getNext();
             }
 
             last.setNext(node);
@@ -58,7 +58,54 @@ public class MyLinkedList<T> {
 //--------------------------------------------
 
 //-------------- remove ----------------------
+    public void remove(int index){
+        if(index < 0 || index >= size()){
+            throw new IndexOutOfBoundsException("Invalid index: " + index + ", Size: " + size());
+        }
 
+        if(index == 0){
+            head = head.getNext();
+            if (head != null){
+                head.setPrevious(null);
+            }
+        } else{
+            Node<T> current = head;
+            for (int i = 0; i < index; i++){
+                current = current.getNext();
+            }
+
+            Node<T> prev = current.getPrevious();
+            Node<T> next = current.getNext();
+
+            if (prev != null) prev.setNext(next);
+            if (next != null) next.setPrevious(prev);
+            if (current == tail){
+                tail = prev;
+            }
+        }
+
+
+
+
+    }
+//--------------------------------------------
+
+//-------------- clear -----------------------
+    public void clear(){
+        Node<T> current = head;
+        while (current != null){
+            Node<T> next = current.getNext();
+
+            current.setValue(null);
+            current.setNext(null);
+            current.setPrevious(null);
+
+            current = next;
+        }
+
+        head = null;
+        tail = null;
+    }
 //--------------------------------------------
 
 }
